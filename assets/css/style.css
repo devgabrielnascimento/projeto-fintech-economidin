@@ -1,0 +1,348 @@
+/* Reset CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variables */
+
+:root {
+  --b-color: #385bba;
+  --hover-color: #181a7db5;
+  --font: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+/* SPLASH CSS */
+#splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: hsla(239, 68%, 29%, 0.41);
+  overflow-x: hidden;
+  transition: 0.1s;
+}
+
+#splash svg {
+  max-width: 100px;
+  width: 20%;
+}
+
+.pigAnimation {
+  animation: rotatecoin 2s linear infinite;
+}
+
+@keyframes rotatecoin {
+  0% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+/* END OF SPLASH CSS */
+
+/* GRID MAIN */
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  height: calc(100vh - 150px);
+}
+
+.logo {
+  background-color: var(--b-color);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 2%;
+}
+
+.logo > img {
+  max-width: 250px;
+}
+
+.login {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+
+.card-login {
+  height: 100%;
+  max-height: 400px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 6px;
+  border: 1px solid rgb(241, 238, 238);
+  box-shadow: 2px 2px 4px 6px rgb(242, 242, 242);
+  padding: 20px;
+}
+
+.card-login header h2 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--b-color);
+  font-family: var(--font);
+}
+
+/* FORM CSS */
+.form-label {
+  font-size: 12px;
+  color: var(--b-color);
+  font-family: var(--font);
+}
+
+input::placeholder {
+  font-size: 0.75rem;
+}
+
+input:focus:invalid {
+  border: 1px solid var(--b-color);
+  box-shadow: 0px 0px 2px 1px var(--b-color);
+}
+
+.forgot-password a {
+  display: flex;
+  margin: 0;
+  justify-content: flex-end;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--b-color);
+}
+
+#iconPW {
+  display: none;
+}
+
+i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#basic-addon3 {
+  background-color: var(--b-color);
+}
+
+#btnPW {
+  background-color: var(--b-color);
+  cursor: pointer;
+  visibility: hidden;
+}
+
+#btnPW:hover {
+  background-color: var(--hover-color);
+}
+
+.form-btn {
+  display: flex;
+  justify-content: center;
+  padding: 2px 0;
+}
+
+.btn-style {
+  min-width: 100%;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-login {
+  margin-top: 6px;
+  background-color: var(--b-color);
+  color: white;
+  font-size: 0.775rem;
+}
+
+.btn-login:hover {
+  background-color: var(--hover-color);
+  transition: ease-in-out 0.5s;
+}
+
+.btn-login:active {
+  background-color: var(--b-color);
+  color: white;
+  transition: ease-in-out 0.8s;
+}
+.linha-div {
+  position: relative;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.linha {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 2px solid #cfcccc;
+}
+
+.texto {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  padding: 0 10px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--b-color);
+  font-size: 0.775rem;
+}
+
+.redessociais {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.redessociais i {
+  margin: 0 10px;
+  font-size: 30px;
+  color: rgb(158, 157, 157);
+}
+
+.redessociais i:hover {
+  color: var(--hover-color);
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+}
+.redessociais i:active {
+  color: var(--b-color);
+  border-radius: 100%;
+  transition: width 2s linear 1s;
+  cursor: pointer;
+}
+
+.sign-up {
+  color: var(--b-color);
+  text-align: center;
+  margin-top: 8px;
+  font-family: var(--font);
+  font-size: 0.775rem;
+}
+
+.sign-up a {
+  text-decoration: none;
+  color: var(--b-color);
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  background-color: rgba(43, 43, 44, 0.98);
+  height: 150px;
+  width: 100%;
+}
+
+.con-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  color: white;
+  font-size: 12px;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.con-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.con-4 p {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.icons_footer {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  font-size: 16px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.icons_footer i:hover {
+  color: hsla(0, 4%, 74%, 0.558);
+  transition: 0.4s linear;
+}
+
+.con-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 12px;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+
+.icon_globe {
+  width: 10px;
+  height: 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .grid-main {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    border-radius: 0 0 45px 0;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  .con-3,
+  .con-4,
+  .con-5 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
